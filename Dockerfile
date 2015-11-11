@@ -1,6 +1,6 @@
 FROM java:8
 
-MAINTAINER Francois Misslin <francois@revinate.com>
+MAINTAINER Jeroen Knoops <jeroen.knoops@gmail.com>
 
 #=========
 # Env variables
@@ -13,9 +13,10 @@ ENV CHROME_DRIVER_VERSION 2.20
 # Install groovy from SDKMan
 #=========
 
-# Installs curl and SDKMan
+# Installs curl, git and SDKMan
 RUN apt-get update && apt-get install -y \
     curl \
+    git \
     unzip
     
 RUN curl -s get.sdkman.io | bash
