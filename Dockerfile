@@ -17,6 +17,7 @@ ENV CHROME_DRIVER_VERSION 2.20
 RUN apt-get update && apt-get install -y \
     curl \
     git \
+    graphviz \
     unzip
     
 RUN curl -s get.sdkman.io | bash
