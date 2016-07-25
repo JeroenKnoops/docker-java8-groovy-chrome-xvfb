@@ -59,3 +59,11 @@ ENV DISPLAY=:99
 ADD xvfb /etc/init.d/
 RUN chmod 755 /etc/init.d/xvfb
 
+# Install Docker from Docker Inc. repositories.
+RUN curl -sSL https://get.docker.com/ | sh && \
+    apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y docker-engine && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
